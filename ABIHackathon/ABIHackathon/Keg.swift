@@ -10,11 +10,25 @@ import Foundation
 import SwiftyJSON
 
 struct Keg {
-    var id: String
     var brand: String?
     var type: String?
     var dateTapped: String?
     var freshnessScore: String?
-    var volume: String?
-    
+    var volume: Int?
+    var didFinishFresh: Bool?
+    init(pastKegWithJSON json: JSON) {
+        self.brand = json["beerName"].stringValue
+        self.type = json["beerType"].stringValue
+        self.volume = json["liters"].intValue
+        self.didFinishFresh = json["finishedFresh"].boolValue
+    }
+}
+
+struct PastOrder {
+    var date: String?
+    var kegs: [Keg]?
+    init(withJSON json: JSON) {
+        self.date = json["date"].stringValue
+        self.kegs = json["kegs"].arrayValue.map { return Keg(pastKegWithJSON: $0) }
+    }
 }

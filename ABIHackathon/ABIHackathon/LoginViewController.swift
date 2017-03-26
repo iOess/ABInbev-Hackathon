@@ -28,9 +28,6 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func login(_ sender: Any) {
-        if let tabViewController = storyboard?.instantiateViewController(withIdentifier: landingViewControllerID) as? LandingViewController {
-            navigationController?.pushViewController(tabViewController, animated: true)
-        }
 
 //        if let barName = barNameTextField.text {
 //            AWSNetworking().loginWithUsername(barName, completion: { (bar) in

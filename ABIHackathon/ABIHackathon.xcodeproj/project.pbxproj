@@ -23,6 +23,9 @@
 		9C2C7C0E1E874F060099CB94 /* Keg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C7C0D1E874F060099CB94 /* Keg.swift */; };
 		9C2C7C101E87571E0099CB94 /* NextOrderRecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C7C0F1E87571E0099CB94 /* NextOrderRecommendationsViewController.swift */; };
 		9C2C7C121E8759FF0099CB94 /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C7C111E8759FF0099CB94 /* Recommendation.swift */; };
+		9C2C7C161E8819B20099CB94 /* pastOrders.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C2C7C151E8819B20099CB94 /* pastOrders.json */; };
+		9C2C7C181E8819E00099CB94 /* OrderHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C7C171E8819E00099CB94 /* OrderHistoryViewController.swift */; };
+		9C2C7C1A1E88303B0099CB94 /* RecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C7C191E88303B0099CB94 /* RecommendationsViewController.swift */; };
 		DA4CE8EB1E88063A0002B7CE /* history-tab-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = DA4CE8EA1E88063A0002B7CE /* history-tab-selected.png */; };
 		DA4CE8ED1E8807F50002B7CE /* order-tab-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = DA4CE8EC1E8807F50002B7CE /* order-tab-selected.png */; };
 		DA4CE8EF1E880AE90002B7CE /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA4CE8EE1E880AE90002B7CE /* x.png */; };
@@ -59,6 +62,9 @@
 		9C2C7C0D1E874F060099CB94 /* Keg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keg.swift; sourceTree = "<group>"; };
 		9C2C7C0F1E87571E0099CB94 /* NextOrderRecommendationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextOrderRecommendationsViewController.swift; sourceTree = "<group>"; };
 		9C2C7C111E8759FF0099CB94 /* Recommendation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
+		9C2C7C151E8819B20099CB94 /* pastOrders.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pastOrders.json; sourceTree = "<group>"; };
+		9C2C7C171E8819E00099CB94 /* OrderHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderHistoryViewController.swift; sourceTree = "<group>"; };
+		9C2C7C191E88303B0099CB94 /* RecommendationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendationsViewController.swift; sourceTree = "<group>"; };
 		A4899332E91266A2E1F84D69 /* Pods_ABIHackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABIHackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB58E6D96B7B327105C06773 /* Pods_ABIHackathonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ABIHackathonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA4CE8EA1E88063A0002B7CE /* history-tab-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history-tab-selected.png"; sourceTree = "<group>"; };
@@ -136,12 +142,15 @@
 				9C2C7C031E873E100099CB94 /* LandingViewController.swift */,
 				9C2C7C051E874D260099CB94 /* CurrentInventoryViewController.swift */,
 				9C2C7C0F1E87571E0099CB94 /* NextOrderRecommendationsViewController.swift */,
+				9C2C7C171E8819E00099CB94 /* OrderHistoryViewController.swift */,
 				9C2C7BFF1E873ACF0099CB94 /* ViewExtensions.swift */,
 				9C2C7C091E874DC90099CB94 /* AWSNetworking.swift */,
 				9C2C7C0B1E874E3F0099CB94 /* Bar.swift */,
 				9C2C7C0D1E874F060099CB94 /* Keg.swift */,
 				9C2C7C111E8759FF0099CB94 /* Recommendation.swift */,
+				9C2C7C191E88303B0099CB94 /* RecommendationsViewController.swift */,
 				9C2C7BE31E873A7A0099CB94 /* Main.storyboard */,
+				9C2C7C151E8819B20099CB94 /* pastOrders.json */,
 				9C2C7BE61E873A7A0099CB94 /* Assets.xcassets */,
 				DA4CE8EE1E880AE90002B7CE /* x.png */,
 				DA4CE8EC1E8807F50002B7CE /* order-tab-selected.png */,
@@ -256,6 +265,7 @@
 				9C2C7BE71E873A7A0099CB94 /* Assets.xcassets in Resources */,
 				9C2C7BE51E873A7A0099CB94 /* Main.storyboard in Resources */,
 				DA4CE8ED1E8807F50002B7CE /* order-tab-selected.png in Resources */,
+				9C2C7C161E8819B20099CB94 /* pastOrders.json in Resources */,
 				DA4CE8EB1E88063A0002B7CE /* history-tab-selected.png in Resources */,
 				DA4CE8EF1E880AE90002B7CE /* x.png in Resources */,
 			);
@@ -375,7 +385,9 @@
 				9C2C7C121E8759FF0099CB94 /* Recommendation.swift in Sources */,
 				9C2C7C101E87571E0099CB94 /* NextOrderRecommendationsViewController.swift in Sources */,
 				9C2C7C0A1E874DC90099CB94 /* AWSNetworking.swift in Sources */,
+				9C2C7C181E8819E00099CB94 /* OrderHistoryViewController.swift in Sources */,
 				9C2C7C041E873E100099CB94 /* LandingViewController.swift in Sources */,
+				9C2C7C1A1E88303B0099CB94 /* RecommendationsViewController.swift in Sources */,
 				9C2C7C061E874D260099CB94 /* CurrentInventoryViewController.swift in Sources */,
 				9C2C7BE01E873A7A0099CB94 /* AppDelegate.swift in Sources */,
 			);
