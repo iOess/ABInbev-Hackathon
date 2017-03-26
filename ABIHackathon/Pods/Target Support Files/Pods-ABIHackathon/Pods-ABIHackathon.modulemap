@@ -1,0 +1,6 @@
+framework module Pods_ABIHackathon {
+  umbrella header "Pods-ABIHackathon-umbrella.h"
+
+  export *
+  module * { export * }
+}
